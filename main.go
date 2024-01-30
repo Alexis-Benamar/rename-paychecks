@@ -40,7 +40,7 @@ func main() {
 		month := date[2:4]
 		year := date[4:]
 
-		newFileName := fmt.Sprintf("Bulletins %s-%s%s.pdf", month, year, dupe)
+		newFileName := fmt.Sprintf("Bulletins %s-%s%s.pdf", year, month, dupe)
 
 		err := os.Rename(filepath.Join(sourceDir, file.Name()), filepath.Join(outputDir, newFileName))
 		if err != nil {
